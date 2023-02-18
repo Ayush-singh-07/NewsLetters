@@ -4,7 +4,8 @@ const https = require('https');
 const path = require('path')
 
 const app = express();
-app.use(express.static(path.join(__dirname, 'public')))
+app.use('*/css',express.static('public/css'));
+app.use('*/images',express.static('public/images'));
 app.use(bodyParser.urlencoded({extended: true}))
 //req.send can be only one time (but we can write to the response using res.write)
 
