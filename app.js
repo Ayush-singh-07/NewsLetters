@@ -17,7 +17,7 @@ app.post('/', (req, res)=>{
     const lname = req.body.n2;
     const email = req.body.email;
 
-    const list_id = "d2d4452e27";
+    const list_id = "List_id";
     const url  = `https://us21.api.mailchimp.com/3.0//lists/${list_id}`;
     
     const data = {
@@ -37,7 +37,7 @@ app.post('/', (req, res)=>{
     const jsondata = JSON.stringify(data);  //parsing js objects to json 
     const options = {   //options for https req
         method: 'POST',
-        auth : 'Ayush1:2154359800c477a6b4f72fc4110e663a'
+        auth : 'Ayush1:ApiKey'
     }
     //saving request of https request in request coonst so we can write the post data later
     const request = https.request(url, options, (response)=>{
