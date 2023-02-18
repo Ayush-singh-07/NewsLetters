@@ -4,7 +4,7 @@ const https = require('https');
 const path = require('path')
 
 const app = express();
-app.use(express.static('public'));
+app.use(express.static('Public'));
 app.use(bodyParser.urlencoded({extended: true}))
 //req.send can be only one time (but we can write to the response using res.write)
 
