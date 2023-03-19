@@ -17,7 +17,7 @@ app.post('/', (req, res)=>{
     const lname = req.body.n2;
     const email = req.body.email;
 
-    const list_id = "d2d4452e27";
+    const list_id = ""+process.env.list_id;
     const url  = `https://us21.api.mailchimp.com/3.0//lists/${list_id}`;
     
     const data = {
